@@ -1,0 +1,303 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(235, 163, 57);
+  font-family: "Pacifico", cursive;
+}
+
+header {
+  background-color: rgb(247, 180, 92);
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+
+  #sombre {
+    text-decoration: none;
+    background-color:  rgb(247, 180, 92);
+    color: rgb(20, 18, 15);
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Pacifico", cursive;
+    font-size: 1.5rem;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 200px;
+
+      li {
+        a {
+          text-decoration: none;
+          padding: 12px 20px;
+          background-color: #201b1b;
+          color: #c9ab25;
+          border: 2px solid #131010;
+          border-radius: 30px;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+        }
+      }
+    }
+  }
+}
+
+.image-container {
+  font-family: "Pacifico", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  background-image: url('images/paysage01.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  .titre-image {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 1.5rem;
+
+    h1 {
+      color: rgb(235, 163, 57);
+      font-family: "Pacifico", cursive;
+    }
+  }
+}
+
+.intro-general {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 20px;
+  justify-content: center;
+
+
+
+  .intro {
+
+    display: flex;
+    color: rgb(22, 21, 21);
+    text-decoration: none;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    text-align: justify;
+    font-size: 1.5rem;
+
+    &.texte {
+      width: 35%;
+      padding-bottom: 20px;
+      padding-bottom: 20px;
+
+      p {
+        padding: 20px;
+        box-shadow: 2px 2px 2px rgba(1, 0, 0, 1);
+      }
+    }
+
+    &.image {
+      width: 45%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 75%;
+        margin: 0;
+        border-radius: 1.5rem;
+        display: block;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+      }
+    }
+  }
+}
+
+.image-container-selection {
+  font-family: "Pacifico", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 25vh;
+  width: 100%;
+  background-image: url('images/paysage01.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 40px;
+
+  .titre-image-selection {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 1.5rem;
+
+
+    h1 {
+      color: rgb(235, 163, 57);
+      font-family: "Pacifico", cursive;
+    }
+  }
+}
+
+/* Conteneur des 3 boîtes */
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  /* Style de chaque boîte */
+  .box {
+    width: 300px;
+    background-color: rgb(247, 180, 92);
+    border: 1px solid rgb(235, 163, 57);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+
+    /* Image en haut */
+    .box-image {
+      width: 100%;
+      height: 325px;
+      object-fit: fill;
+    }
+
+    /* Ligne de séparation */
+    .separator {
+      height: 1px;
+      background-color: rgb(247, 180, 92);
+    }
+
+    /* Texte en bas */
+    .box-text {
+      padding: 15px;
+
+      h3 {
+        text-align: center;
+      }
+
+      button {
+        display: block;
+        background: linear-gradient(#cfced6, #a18b0a);
+        color: black;
+        padding: 10px 10px;
+        font-size: 14px;
+        margin: 20px auto 0;
+        /* Centré horizontalement, espace en haut */
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+footer {
+  background-color: rgb(247, 180, 92);
+  padding: 2rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.85rem;
+
+    .lien-icone {
+      text-decoration: none;
+      color: rgb(20, 18, 15);
+    }
+
+  }
+
+}
+
+
+/* Mode sombre activé */
+.dark-mode {
+  background-color: #121212; /* fond sombre global */
+  color: #f5f5f5;            /* texte clair */
+}
+
+/* Header sombre */
+.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+/* Navigation sombre */
+.dark-mode nav ul li a {
+  background-color: #2a2a2a;
+  color: #e4c35d; /* or clair */
+  border-color: #444;
+}
+
+/* Section intro */
+.dark-mode .intro.texte p {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Boîtes de sélection */
+.dark-mode .box {
+  background-color: #1c1c1c;
+  border: 1px solid #e4c35d; /* doré */
+  color: #f5f5f5;
+}
+
+.dark-mode .box button {
+  background: linear-gradient(#e4c35d, #a18b0a);
+  color: #121212;
+}
+
+/* Footer */
+.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .socials .lien-icone {
+  color: #e4c35d;
+}
