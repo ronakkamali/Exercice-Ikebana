@@ -310,15 +310,17 @@ footer {
 
   /* Header */
   header {
+    padding: 1rem;
+
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 
   }
 
   header .logo {
     display: flex;
-    margin: 0 auto;
     width: 80px;
 
 
@@ -329,19 +331,20 @@ footer {
     display: none;
   }
 
-  /* Navigation → menu hamburger */
-  nav ul a  {
+  header nav ul {
     display: none;
-    /* 
-    flex-direction: column;
-    gap: 1rem;
-    background: #1e1e1e;
-    position: absolute;
-    top: 80px;
-    right: 10px;
-    padding: 1rem;
-    border-radius: 10px;
-    */
+    
+  }
+
+  /* Navigation → menu hamburger */
+  header nav ul li a  {
+  
+    background: transparent;
+    color : #1e1e1e;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+   
   }
 
 
@@ -359,6 +362,10 @@ footer {
   /* Quand on clique sur le hamburger, on affiche */
   nav.active ul  {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10;
+    gap: 1rem;
   }
 
   /* Image container remplacée */
@@ -368,6 +375,11 @@ footer {
   }
 
   .image-container-selection h1 {
+    text-align: center;
+
+  }
+  
+  .image-container h1 {
     text-align: center;
 
   }
@@ -384,13 +396,13 @@ footer {
     padding: 10px;
   }
 
-  .intro.texte {
+  .intro-general .intro.texte {
     width: 100%;
     box-sizing: border-box;
   }
 
 
-  .intro.image {
+  .intro-general .intro.image {
     width: 100%;
     display: flex;
     justify-content: center;
