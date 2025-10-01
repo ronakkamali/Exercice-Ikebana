@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Meddon&family=Pacifico&display=swap" rel="stylesheet">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <title>Contact</title>
 </head>
 
@@ -40,11 +40,71 @@
                 <h1>Nous contacter</h1>
             </div>
         </div>
-        <section>
-            
-           
 
+        <section>
+            <form method="post" action="javascript:void(0)">
+
+                <div>
+                    <p>Votre titre</p>
+                    <input id="male" name="titre" value="m" type="radio">
+                    <label for="male">M.</label>
+                    <input id="female" name="titre" value="mme" type="radio">
+                    <label for="female">Mme.</label>
+                    <input id="other" name="titre" value="mx" type="radio">
+                    <label for="other">Mx.</label>
+                </div>
+
+                <div>
+                    <label for="lastname">Nom</label>
+                    <input autofocus id="lastname" name="lastname" placeholder="Votre nom" type="text" maxlength="10"
+                        required>
+                </div>
+
+                <div>
+                    <label for="firstname">Prénom</label>
+                    <input id="firstname" name="firstname" placeholder="Votre prénom" type="text" maxlength="10">
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" placeholder="Votre email" type="email" required>
+                </div>
+
+                <div>
+                    <label for="tel">Téléphone</label>
+                    <input id="tel" name="tel" placeholder="Votre numéro de téléphone" type="tel">
+                </div>
+
+                <div>
+                    <label for="sujet">Quel est le sujet de votre message</label>
+                    <select name="sujet" id="sujet">
+                        <option selected hidden value="">Choisissez le sujet</option>
+                        <option value="prix">Prix</option>
+                        <option value="avis">Avis</option>
+                        <option value="event">Commande pour évenement</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+
+                <div class="textarea-block">
+                    <label for="comment">Votre commentaire</label>
+                    <textarea spellcheck="true" rows="5" cols="50"  name="commentaire"
+                        id="comment" placeholder="Votre message max 200 caractères"></textarea>
+                    <div id="error-message" class="error-message">Vous avez dépassé la limite de 200 caractères !</div>
+                </div>
+
+                <div>
+                    <input id="newsletter" name="newsletter" type="checkbox">
+                    <label for="newsletter">Je souhaite m'abonner à la newsletter hebdomadaire</label>
+                </div>
+
+                <button>Envoyer</button>
+                <button type="reset">Effacer</button>
+
+            </form>
         </section>
+
+
     </main>
 
     <footer>

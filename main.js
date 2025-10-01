@@ -25,3 +25,28 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.classList.toggle("active");
     });
 });
+
+
+
+
+const textarea = document.getElementById('comment');
+const errorMessage = document.getElementById('error-message');
+const maxLength = 200;
+
+textarea.addEventListener('input', () => {
+  if (textarea.value.length > maxLength) {
+    textarea.classList.add('error');
+    errorMessage.style.display = 'block';
+  } else {
+    textarea.classList.remove('error');
+    errorMessage.style.display = 'none';
+  }
+});
+
+// Bloquer la soumission si trop long
+document.querySelector('form').addEventListener('submit', (e) => {
+  if (textarea.value.length > maxLength) {
+    e.preventDefault();
+    alert('Votre commentaire dépasse la limite de 200 caractères.');
+  }
+});
