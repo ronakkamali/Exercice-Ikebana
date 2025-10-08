@@ -286,7 +286,7 @@ form>div {
   margin-bottom: 0.5rem;
 }
 
-label:has(~input:required)::after {
+label:has(~input:required, ~select:required)::after, .required::after {
   content: "*" / "requis";
   color: red;
   margin-left: 0.25rem;
@@ -314,7 +314,14 @@ textarea {
   resize: none;
 }
 
+input[type=radio] {
+  accent-color:  rgb(247, 180, 92);
+}
 
+
+input[type=checkbox] {
+  accent-color:  rgb(247, 180, 92);
+}
 
 button {
   

@@ -45,8 +45,8 @@
             <form method="post" action="javascript:void(0)">
 
                 <div>
-                    <p>Votre titre</p>
-                    <input id="male" name="titre" value="m" type="radio">
+                    <p class="required">Votre titre</p>
+                    <input id="male" name="titre" value="m" type="radio" required>
                     <label for="male">M.</label>
                     <input id="female" name="titre" value="mme" type="radio">
                     <label for="female">Mme.</label>
@@ -77,7 +77,7 @@
 
                 <div>
                     <label for="sujet">Quel est le sujet de votre message</label>
-                    <select name="sujet" id="sujet">
+                    <select name="sujet" id="sujet" required>
                         <option selected hidden value="">Choisissez le sujet</option>
                         <option value="prix">Prix</option>
                         <option value="avis">Avis</option>
